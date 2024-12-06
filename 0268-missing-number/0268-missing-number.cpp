@@ -5,14 +5,42 @@ public:
         int xorEle=0;
         int xorIndex = 0;
         int n = nums.size();
-        for(int i=0;i<n;i++){
-           
-                xorEle = xorEle ^ nums[i];
-                xorIndex = xorIndex ^ (i+1);
-            
-        }
         
-        return (xorEle ^ xorIndex); 
+        
+        // for(int i=0;i<n;i++){
+        //         xorEle = xorEle ^ nums[i];
+        //         xorIndex = xorIndex ^ (i+1);
+        // }
+        // return (xorEle ^ xorIndex); 
+        
+        for (int i = 0; i < n; i++) {
+        xorEle = xorEle ^ nums[i];
+        }
+
+       // XOR all indices from 0 to n-1
+        for (int i = 0; i < n; i++) {
+        xorIndex = xorIndex ^ i;
+        }
+       // XOR the result of the two XORs (also include n for the missing number)
+       return xorEle ^ xorIndex ^ n;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
 //          int ans;
